@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: right;
+}
+.currenties {
+    background-color: lightcoral;
+    display: flex;
+    padding: 10px;
+    color: #fff;
+}
+.currents-block {
+    position: relative;
+    ::after {
+        margin: 0 10px 0 5px;
+        content: " | ";
+    }
+}
+.currents-block:last-child {
+    ::after {
+        content: "";
+    }
+}

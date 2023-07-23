@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="converison" *ngIf="CurrentInfo">
+        <form [formGroup]="checkCurrencyFirst">
+            <div class="block">
+                <label for="convert-left">
+                    <span class="label-information">From:</span>
+                    <div class="form-convert">
+                        <input class="change__sum" formControlName="changeSum" min="0" (input)="check(checkCurrencyFirst.controls, checkCurrencySecond.controls)" id="convert-left" type="number">
+                        <select class="select__currency" formControlName="select" (change)="check(checkCurrencyFirst.controls, checkCurrencySecond.controls)" name="" id="">
+                            <ng-container *ngFor="let current of CurrentInfo.rates | keyvalue">
+                                <option [value]="current.key">{{current.key}}</option>
+                            </ng-container>
+                        </select>
+                    </div>
+                </label>
+            </div>
+        </form>
+        <form [formGroup]="checkCurrencySecond">
+            <div class="block">
+                <label for="convert-right">
+                    <span class="label-information">To:</span>
+                    <div class="form-convert">
+                        <input class="change__sum" formControlName="changeSum" min="0" (input)="check(checkCurrencySecond.controls, checkCurrencyFirst.controls)" id="convert-right" type="number">
+                        <select class="select__currency" formControlName="select" (change)="check(checkCurrencySecond.controls, checkCurrencyFirst.controls)" name="" id="">
+                            <ng-container *ngFor="let current of CurrentInfo.rates | keyvalue">
+                                <option [value]="current.key">{{current.key}}</option>
+                            </ng-container>
+                        </select>
+                    </div>
+                </label>
+            </div>
+        </form>
+    </div>
+</div>

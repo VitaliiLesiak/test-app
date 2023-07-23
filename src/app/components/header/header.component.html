@@ -1,0 +1,9 @@
+<div class="header" *ngIf="currentInfo">
+    <div class="currenties">
+        <div class="currents-block" *ngFor="let current of currentInfo.rates | keyvalue">
+            <div *ngIf="current.key !== currentInfo.base">
+                {{(1 / current.value).toFixed(2) | currency: current.key}}
+            </div>
+        </div>
+    </div>
+  </div>

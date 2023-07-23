@@ -1,0 +1,33 @@
+
+.converison {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+}
+
+.block {
+    padding: 40px;
+    margin: 5px;
+    border: 1px solid gray;
+}
+.select__currency {
+    border: 1px solid #767676;
+}
+.change__sum, .select__currency {
+    outline: none;
+}
+.label-information {
+    display: block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.change__sum {
+    padding: 5px;
+    text-align: center;
+}
+.form-convert {
+    margin-top: 5px;
+    display: flex;
+}
